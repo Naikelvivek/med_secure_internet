@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login - MedSecure</title>
+    <link rel="stylesheet" href="/public/styles.css">
+  </head>
+  <body>
+    <div class="layout">
+      <div class="hero">
+        <div class="hero-inner">
+          <img src="/public/illustration.svg" alt="illustration" class="illustration">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-card">
+          <img src="/public/logo.svg" class="logo" alt="logo">
+          <h3>Welcome Back</h3>
+          <p class="sub">Please enter your email and password to continue</p>
+          <% if (message) { %>
+            <div class="msg"><%= message %></div>
+          <% } %>
+          <form method="POST" action="/login" class="form">
+            <div class="field">
+              <input name="email" type="email" placeholder="Email" required />
+            </div>
+            <div class="field">
+              <input name="password" type="password" placeholder="Password" required />
+            </div>
+            <button class="primary" type="submit">LOGIN</button>
+          </form>
+          <div class="foot-links">
+            <a href="/signup">Create account</a>
+            <a href="/forgot">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

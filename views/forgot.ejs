@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Forgot Password - MedSecure</title>
+    <link rel="stylesheet" href="/public/styles.css">
+  </head>
+  <body>
+    <div class="layout">
+      <div class="hero">
+        <div class="hero-inner">
+          <img src="/public/illustration.svg" alt="illustration" class="illustration">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-card">
+          <img src="/public/logo.svg" class="logo" alt="logo">
+          <h3>Change Password</h3>
+          <p class="sub">Enter current password and set a new one</p>
+          <% if (message) { %>
+            <div class="msg"><%= message %></div>
+          <% } %>
+          <form method="POST" action="/forgot" class="form">
+            <div class="field">
+              <input name="email" type="email" placeholder="Email" required />
+            </div>
+            <div class="field">
+              <input name="currentPassword" type="password" placeholder="Current Password" required />
+            </div>
+            <div class="field">
+              <input name="newPassword" type="password" placeholder="New Password" required />
+            </div>
+            <div class="field">
+              <input name="confirmPassword" type="password" placeholder="Confirm New Password" required />
+            </div>
+            <button class="primary" type="submit">CHANGE PASSWORD</button>
+          </form>
+          <div class="foot-links">
+            <a href="/">Back to login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

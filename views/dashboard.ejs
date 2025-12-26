@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard - MedSecure</title>
+    <link rel="stylesheet" href="/public/styles.css">
+  </head>
+  <body>
+    <div class="layout single">
+      <div class="hero small">
+        <div class="hero-inner">
+          <img src="/public/illustration.svg" alt="illustration" class="illustration">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-card">
+          <img src="/public/logo.svg" class="logo" alt="logo">
+          <h3>Dashboard</h3>
+          <p class="sub">Signed in as <strong><%= email %></strong></p>
+          <div style="margin-top:18px">
+            <a class="primary-outline" href="/logout">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
